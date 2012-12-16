@@ -1,0 +1,77 @@
+[
+	{
+		"name":"rule1",
+		"condition":["has hair"],
+		"result":["is mammal"]
+	},
+	{
+		"name":"rule2",
+		"condition":["gives milk"],
+		"result":["is mammal"]
+	},
+	{
+		"name":"rule3",
+		"condition":["has feathers"],
+		"result":["is bird"]
+	},
+	{
+		"name":"rule4",
+		"condition":["flies", "lays eggs"],
+		"result":["is bird"]
+	},
+	{
+		"name":"rule5",
+		"condition":["eats meat"],
+		"result":["is carnivore"]
+	},
+	{
+		"name":"rule6",
+		"condition":["has pointed teeth", "has claws", "has forward eyes"],
+		"result":["is carnivore"]
+	},
+	{
+		"name":"rule7",
+		"condition":["is mammal", "has hoofs"],
+		"result":["is ungulate"]
+	},
+	{
+		"name":"rule8",
+		"condition":["is mammal", "chews cud"],
+		"result":["is ungulate"]
+	},
+	{
+		"name":"rule9",
+		"condition":["is mammal", "is carnivore", "has tawny color", "has dark spots"],
+		"result":["is cheetah"]
+	},
+	{
+		"name":"rule10",
+		"condition":["is mammal", "is carnivore", "has tawny color", "has black stripes"],
+		"result":["is tiger"]
+	},
+	{
+		"name":"rule11",
+		"condition":["is ungulate", "has long neck", "has long legs", "has dark spots"],
+		"result":["is giraffe"]
+	},
+	{
+		"name":"rule12",
+		"condition":["is ungulate", "has black stripes"],
+		"result":["is zebra"]
+	},
+	{
+		"name":"rule13",
+		"condition":["is bird", "does not fly", "has long neck", "has long legs", "is black and white"],
+		"result":["is ostrich"]
+	},
+	{
+		"name":"rule14",
+		"condition":["is bird", "does not fly", "swims", "is black and white"],
+		"result":["is penguin"]
+	},
+	{
+		"name":"rule15",
+		"condition":["is bird", "flies well"],
+		"result":["is albatross"]
+	}
+]
