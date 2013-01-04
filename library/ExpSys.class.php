@@ -8,7 +8,43 @@
  */
 class ExpSys
 {
-    private $rules; //当前规则库
-    private $facts; //当前已知事实
+    private $rules; //当前运行时规则库数组
+    private $facts; //当前已知事实数组
     private $logs; //推理日志
+
+    /**
+     * 设置运行时规则库数组
+     * @param $r
+     * @return bool
+     */
+    public function setRules($r) {
+        if (is_array($r) && !empty($r)) {
+            $this->rules = $r;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 设置已知事实
+     * @param $f
+     * @return bool
+     */
+    public function setFacts($f) {
+        if(is_array($f) && !empty($f)) {
+            $this->facts = $f;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function infer() {
+
+    }
+
+    private function _find_available_rule() {
+
+    }
 }

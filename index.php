@@ -8,13 +8,6 @@
  */
 include(dirname(__FILE__) . '/include/init.php');
 
-$t = new Translation();
-$t->load();
-
-$rl = new RuleLib();
-$rl->load();
-
-$tpl = new Template();
 $tpl->assign(array(
     'rules' => json_decode($rl->export(true)),
     'facts' => $rl->get_all_facts()

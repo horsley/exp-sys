@@ -39,7 +39,7 @@ class RuleLib
      * @param $return 为真返回字符串(json)，否则直接存到RULES_LIB_PATH，返回写入字节数（非零）
      * @return int|string
      */
-    public function export($return) {
+    public function export($return = false) {
         if ($return) {
             return json_encode($this->rules);
         } else {
@@ -54,6 +54,21 @@ class RuleLib
      */
     public function get_all_facts() {
         return $this->facts;
+    }
+
+    /**
+     * 返回指定哈希值的事实的文本数组
+     * @param $hashes
+     * @return array
+     */
+    public function get_facts_by_hash($hashes) {
+        $result = array();
+        foreach($hashes as $h) {
+            if (!empty($this->facts_hashtable->$h)) {
+                $result[] = $this->facts_hashtable->$h;
+            }
+        }
+        return $result;
     }
 
     /**

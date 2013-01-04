@@ -25,3 +25,12 @@ include_once(APP_LIB_ROOT . '/Translation.class.php');
 
 //应用函数库加载
 include_once(APP_LIB_ROOT . '/functions.php');
+
+//全局对象
+$t = new Translation();
+$t->load();
+
+$rl = new RuleLib();
+$rl->load();
+
+$tpl = new Template();
