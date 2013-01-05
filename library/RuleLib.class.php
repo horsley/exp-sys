@@ -72,7 +72,7 @@ class RuleLib
     }
 
     /**
-     * 提起规则库中的事实
+     * 提取规则库中的事实
      */
     private function _extract_facts() {
         foreach($this->rules as $rule) {

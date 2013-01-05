@@ -7,10 +7,14 @@
  * To change this template use File | Settings | File Templates.
  */
 
+//调试报错信息开关
+error_reporting(E_ALL);
+
 //路径常量定义
 if(!defined("SYS_ROOT")) define("SYS_ROOT", dirname(dirname(__FILE__)));
 if(!defined("SYS_LIB_ROOT")) define("SYS_LIB_ROOT", SYS_ROOT . '/include');
 if(!defined("APP_LIB_ROOT")) define("APP_LIB_ROOT", SYS_ROOT . '/library');
+if(!defined("RULES_LIB_PATH")) define("RULES_LIB_PATH", SYS_ROOT . '/data/rules.default.json');
 
 //模板文件路径定义
 if (!defined('TPL_ROOT_PATH')) define('TPL_ROOT_PATH', SYS_ROOT . '/template');
@@ -19,18 +23,9 @@ if (!defined('TPL_FILE_EXT')) define('TPL_FILE_EXT', '.php');
 //系统核心库加载
 include_once(SYS_LIB_ROOT. '/template.php');
 
-//应用类库加载
-include_once(APP_LIB_ROOT . '/RuleLib.class.php');
-include_once(APP_LIB_ROOT . '/Translation.class.php');
-
 //应用函数库加载
 include_once(APP_LIB_ROOT . '/functions.php');
 
 //全局对象
-$t = new Translation();
-$t->load();
-
-$rl = new RuleLib();
-$rl->load();
 
 $tpl = new Template();

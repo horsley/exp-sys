@@ -8,21 +8,9 @@
  */
 
 /**
- * 输出词条翻译
- * @param $term
- * @param $return 返回还是直接输出
- * @return string 返回字符串
+ * 返回默认规则库规则对象数组
+ * @return mixed
  */
-function t($term, $return = false) {
-    global $t;
-    if (empty($t)) {
-        $t = new Translation();
-    }
-    $term = trim($term);
-    if ($return) {
-        return $t->translate($term);
-    } else {
-        echo $t->translate($term);
-    }
-
+function get_default_rules() {
+    return json_decode(file_get_contents(RULES_LIB_PATH));
 }

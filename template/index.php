@@ -7,23 +7,11 @@
  * To change this template use File | Settings | File Templates.
  */
 include(TPL_ROOT_PATH . '/common_head.php');?>
-<body data-spy="scroll" data-target=".navbar">
-    <div class="navbar navbar-fixed-top">
-        <div id="nav" class="navbar-inner">
-            <div class="container">
-                <a class="brand" href="#home">动物识别系统</a>
-                <ul class="nav">
-                    <li><a href="#rule-lib"><i class="icon-arrow-right"></i> 规则库</a></li>
-                    <li><a href="#init-facts"><i class="icon-arrow-right"></i> 初始事实</a></li>
-                    <li><a href="#inference"><i class="icon-arrow-right"></i> 进行推理</a></li>
-                    <li><a href="#about"><i class="icon-info-sign"></i>关于</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
+<body>
     <div class="container">
-        <div id="home">
+        <div></div>
+        <div class="progress">
+            <div class="bar" style="width: 25%"></div>
         </div>
             <div id="rule-lib">
                 <div class="page-header">

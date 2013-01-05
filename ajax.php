@@ -21,8 +21,8 @@ function start_infer() {
     $facts = $rl->get_facts_by_hash($_GET['facts']);
 
     $ex = new ExpSys();
-    $ex->setRules(json_decode($rl->export(true)));
-    $ex->setFacts($facts);
+    $ex->set_rules(json_decode($rl->export(true)));
+    $ex->set_facts($facts);
 
 }
 

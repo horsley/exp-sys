@@ -8,8 +8,14 @@
  */
 include(dirname(__FILE__) . '/include/init.php');
 
-$tpl->assign(array(
-    'rules' => json_decode($rl->export(true)),
-    'facts' => $rl->get_all_facts()
-));
-$tpl->show("index");
+if (!isset($_GET['step']) || !in_array($_GET['step'], array(1, 2, 3))) {
+    $_GET['step'] = 1;
+}
+
+switch ($_GET['step']) {
+    case 1:
+        $tpl->assign(array('rules' => get_default_rules()));
+        $tpl->show("step1");
+        break;
+}
+
