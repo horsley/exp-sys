@@ -1,5 +1,6 @@
 <?php
 /**
+ * 项目入口文件
  * Created by JetBrains PhpStorm.
  * User: horsley
  * Date: 12-12-18
@@ -25,7 +26,12 @@ include_once(SYS_LIB_ROOT. '/template.php');
 
 //应用函数库加载
 include_once(APP_LIB_ROOT . '/functions.php');
+include_once(APP_LIB_ROOT . '/ExpSys.class.php');   //专家系统
 
+include_once(APP_LIB_ROOT . '/AI_ID3.class.php');   //ID3
+include_once(APP_LIB_ROOT . '/DS_Tree.class.php');  //
 //全局对象
 
 $tpl = new Template();
+
+session_start();

@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>动物识别专家系统 - 专家系统课程作业</title>
+    <title>专家系统课程作业</title>
 
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
@@ -17,4 +17,5 @@
     <script type="text/javascript" src="static/js/jquery.min.js"></script>
     <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="static/js/main.js"></script>
+    <?=isset($extra_head) ? $extra_head : ''?>
 </head>

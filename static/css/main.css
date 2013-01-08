@@ -15,18 +15,29 @@ body {
     vertical-align: middle;
 }
 
-#home, #rule-lib, #init-facts, #inference, #about {
-    padding-top: 60px;
+.action-bar {
+    margin-top: 15px;
 }
 
-#rules-list td {
-    vertical-align: middle;
+#rules-list tr {
+    cursor: pointer;
 }
 
-#rules-list  div.rule-operation {
-    visibility: hidden;
+#rules-list tr.selected td{
+    background-color: #08C;
 }
 
-#rules-list tr:hover div.rule-operation {
-    visibility: visible;
+#rules-list tr.selected td:hover{
+    background-color: #08C;
+}
+
+#facts-list ul, .result_log{
+    padding: 1em 2em;
+    margin: 0;
+}
+#id3_data {
+    padding: 1em;
+}
+.result_log h3 {
+    display: inline;
 }
